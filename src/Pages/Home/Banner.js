@@ -16,15 +16,15 @@ import './Banner.css'
 
 const Banner = () => {
     return (
-        <div>
+        <div className='mb-16'>
             <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 my-5">
 
-                <div className="... h-[600px] p-16">
+                <div className="... lg:h-[600px] p-16">
 
                     <div className=''>
                         <p className='my-10 text-[#cea274] text-xl text-start font-serif'>WedRoad Accessories</p>
-                        <h1 className='text-6xl my-12 text-[#749383] font-extrabold font-serif text-start'>Dream Weddings <br/> Made Simple</h1>
-                        <p className='text-start w-[500px] my-10 text-xl text-[#7c7c7c]'>
+                        <h1 className='lg:text-6xl text-2xl my-12 text-[#749383] font-extrabold font-serif text-start'>Dream Weddings <br/> Made Simple</h1>
+                        <p className='text-start lg:w-[500px] my-10 text-xl text-[#7c7c7c]'>
                         Congratulations,  you’re getting married! This is a time for joy, so definitely take it all in – pop some champagne, get all blissed out on your soon-to-be boo for life.
                         </p>
                     </div>

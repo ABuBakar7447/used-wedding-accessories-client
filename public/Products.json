@@ -1,0 +1,114 @@
+[
+    {
+    "img_url":"https://i.pinimg.com/550x/f8/07/86/f807863cb1026dceb5e89b1fb05e1ec8.jpg",
+    "product_category":"Ladies Collection",
+    "product_name":"Wedding Zamdani",
+    "location":"Dhaka",
+    "resale_price":"5000",
+    "original_price":"10,000",
+    "uses_time":"1 day",
+    "purchase_year":"2020",
+    "post_date":"20/05/2021",
+    "condition":"Good",
+    "seller_name":"abc",
+    "seller_email":"abc@gmail.com",
+    "seller_number":"01889911221",
+    "description":"Dress is in very good condition.It still lookes new.",
+    "product_status":"Available."
+    },
+    
+    
+    {
+    "img_url":"https://i.pinimg.com/736x/27/1a/19/271a19757a5eb2f2dd6129f1f00fc301.jpg",
+    "product_category":"Ladies Collection",
+    "product_name":"Dress For Holud",
+    "location":"Dhaka",
+    "resale_price":"1500",
+    "original_price":"2000",
+    "uses_time":"4 times",
+    "purchase_year":"2021",
+    "post_date":"21/05/2022",
+    "condition":"Good",
+    "seller_name":"abcd",
+    "seller_email":"abcd@gmail.com",
+    "seller_number":"01889911211",
+    "description":"Dress is in very good condition.Color is very beautiful.",
+    "product_status":"Available."
+    },
+    
+    
+    {
+    "img_url":"https://i.pinimg.com/736x/55/08/0c/55080c1ab8f37752b2bc5350974df45d.jpg",
+    "product_category":"Males Collection",
+    "product_name":"Wedding Sherwani",
+    "location":"Chattogram",
+    "resale_price":"6000",
+    "original_price":"8000",
+    "uses_time":"1 day",
+    "purchase_year":"2020",
+    "post_date":"20/05/2022",
+    "condition":"Fair",
+    "seller_name":"trex",
+    "seller_email":"trex@gmail.com",
+    "seller_number":"01889911222",
+    "description":"It still looks new, no color issue problem",
+    "product_status":"Available."
+    },
+    
+    
+    {
+    "img_url":"https://www.kablewala.com.bd/images/detailed/27/BH-20__1_.jpg",
+    "product_category":"Males Collection",
+    "product_name":"Wedding Panjabi",
+    "location":"Chattogram",
+    "resale_price":"1200",
+    "original_price":"3000",
+    "uses_time":"1 day",
+    "purchase_year":"2020",
+    "post_date":"20/06/2022",
+    "condition":"Good",
+    "seller_name":"Drex",
+    "seller_email":"drex@gmail.com",
+    "seller_number":"01889911226",
+    "description":"Color is very beautiful",
+    "product_status":"Available."
+    },
+    
+    
+    {
+    "img_url":"https://media.dunelondon.com/image/upload/v1671639095/core/plp-header/DL_SS23_BRIDAL_BOUTIQUES_IVORY_700x1000.jpg",
+    "product_category":"Shoes",
+    "product_name":"Ladies Shoes",
+    "location":"Chattogram",
+    "resale_price":"50,300",
+    "original_price":"205000",
+    "yearof_use":"2.8 year",
+    "purchase_year":"2019",
+    "post_date":"20/06/2022",
+    "condition":"Good",
+    "seller_name":"Alex",
+    "seller_email":"alex@gmail.com",
+    "seller_number":"01889911299",
+    "description":"It don't waste oil.It takes 30sec to reach to take speed 80mph.",
+    "product_status":"Available."
+    },
+    
+    
+    {
+    "img_url":"https://www.topgear.com/sites/default/files/cars-car/image/2020/06/303332_2020_honda_jazz.jpg",
+    "product_category":"Shoes",
+    "product_name":"Honda Jazz",
+    "location":"Chattogram",
+    "resale_price":"50,000",
+    "original_price":"300000",
+    "yearof_use":"1 year",
+    "purchase_year":"2021",
+    "post_date":"20/06/2022",
+    "condition":"Good",
+    "seller_name":"Mouka",
+    "seller_email":"mouka@gmail.com",
+    "seller_number":"01889911277",
+    "description":"Car is in very good condition.It takes 30sec to reach to take speed 80mph.",
+    "product_status":"Available."
+    }
+]

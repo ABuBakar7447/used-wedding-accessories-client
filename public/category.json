@@ -1,0 +1,24 @@
+[
+
+    {
+     "category_name":"Ladies Collection",
+     "img_url":"https://ibb.co/gFzrXZH",
+     "total_sell":"200",
+     "category_id":"01"
+    },
+    
+    {
+     "category_name":"Males Collection",
+     "img_url":"https://ibb.co/gJXZgCw",
+     "total_sell":"150",
+     "category_id":"02"
+    },
+    
+    {
+     "category_name":"Shoes",
+     "img_url":"https://ibb.co/McQWybj",
+     "total_sell":"180",
+     "category_id":"03"
+    }
+    
+]
