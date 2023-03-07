@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Navbar = () => {
+    const { user, userLogOut } = useContext(AuthContext)
+
+    const handleLogout = () => {
+        userLogOut()
+            .then()
+            .catch()
+    }
     return (
         <div>
             <div className="navbar bg-[] text-[#cea274] font-serif text-[18px] font-bold ">
@@ -13,7 +21,17 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/blog'>Blog</Link></li>
-                            <li><Link to='/login'>Login</Link></li>
+                            {
+                                user?.email ?
+                                    <><li><Link to='/dashboard'>DashBoard</Link></li>
+                                        <li>
+                                            <button onClick={handleLogout}>Log Out</button>
+                                        </li>
+                                    </>
+                                    :
+                                    <li><Link to='/login'>Login</Link></li>
+                            }
+
                             <li><Link to='/signin'>SignUp</Link></li>
                             <li tabIndex={0}>
                                 <Link to='' className="justify-between">
@@ -34,10 +52,19 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal px-1">
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
-                        <li><Link to='/login'>Login</Link></li>
+                        {
+                            user?.email ?
+                                <><li><Link to='/dashboard'>DashBoard</Link></li>
+                                    <li>
+                                        <button onClick={handleLogout}>Log Out</button>
+                                    </li>
+                                </>
+                                :
+                                <li><Link to='/login'>Login</Link></li>
+                        }
                         <li><Link to='/signin'>SignUp</Link></li>
 
-                        <li tabIndex={0}>
+                        {/* <li tabIndex={0}>
                             <Link to=''>
                                 Parent
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
@@ -46,8 +73,8 @@ const Navbar = () => {
                                 <li><Link to=''>Submenu 1</Link></li>
                                 <li><Link to=''>Submenu 2</Link></li>
                             </ul>
-                        </li>
-                        <li><Link to=''>Item 3</Link></li>
+                        </li> */}
+                        {/* <li><Link to=''>Item 3</Link></li> */}
                     </ul>
                 </div>
                 <div className="navbar-end">

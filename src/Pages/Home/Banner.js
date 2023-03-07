@@ -42,7 +42,7 @@ const Banner = () => {
 
 
 
-                <div className="... h-[600px] px-10 ">
+                <div className="... h-[600px] px-10">
                     <Swiper
                         spaceBetween={30}
                         centeredSlides={true}
@@ -57,21 +57,21 @@ const Banner = () => {
                         className="mySwiper"
                     >
                         <SwiperSlide>
-                            <div className='h-[600px] imgGradient'>
+                            <div className='h-[600px] imgGradien rounded-xl'>
                                 <img src={pic1} alt="" className='w-full h-full rounded' />
                             </div>
                         </SwiperSlide>
 
 
                         <SwiperSlide>
-                            <div className='h-[600px] imgGradient'>
+                            <div className='h-[600px] imgGradient rounded-xl'>
                                 <img src={pic2} alt="" className='w-full h-full rounded' />
                             </div>
                         </SwiperSlide>
 
 
                         <SwiperSlide>
-                            <div className='h-[600px] imgGradient'>
+                            <div className='h-[600px] imgGradient rounded-xl'>
                                 <img src={pic3} alt="" className='w-full h-full rounded' />
                             </div>
                         </SwiperSlide>
