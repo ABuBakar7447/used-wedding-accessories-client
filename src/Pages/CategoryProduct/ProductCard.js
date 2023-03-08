@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import { FaCheckCircle } from 'react-icons/fa';
+import { FaCheckCircle, FaCartPlus } from 'react-icons/fa';
 
 const ProductCard = ({ viewProduct, setModalData }) => {
     const { img_url, product_name, location, resale_price, original_price, uses_time, purchase_year, post_date, condition, seller_name, product_status, seller_email } = viewProduct;
@@ -84,7 +84,8 @@ const ProductCard = ({ viewProduct, setModalData }) => {
                         
 
                             <label htmlFor="my-modal-3" className="btn border-0 bg-[#cea274]
-                            hover:bg-[#749383]" onClick={() => setModalData(viewProduct)}  >Book Now</label>
+                            hover:bg-[#749383] font-bold" onClick={() => setModalData(viewProduct)}  >Order 
+                            <FaCartPlus className='text-black ml-2'></FaCartPlus></label>
                             
                         
                     </div>

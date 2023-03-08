@@ -1,9 +1,18 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+// import useAdmin from '../../Hooks/useAdmin';
+// import useBuyer from '../../Hooks/useBuyer';
+// import useSeller from '../../Hooks/useSeller';
 
 const Navbar = () => {
     const { user, userLogOut } = useContext(AuthContext)
+
+    
+    // const [isAdmin] = useAdmin(user?.email)
+    // const [isSeller] = useSeller(user?.email)
+    // const [isBuyer] = useBuyer(user?.email)
+
 
     const handleLogout = () => {
         userLogOut()
@@ -12,7 +21,7 @@ const Navbar = () => {
     }
     return (
         <div>
-            <div className="navbar bg-[] text-[#cea274] font-serif text-[18px] font-bold ">
+            <div className="navbar shadow-xl text-[#cea274] font-serif text-[18px] font-bold ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -33,17 +42,43 @@ const Navbar = () => {
                             }
 
                             <li><Link to='/signin'>SignUp</Link></li>
-                            <li tabIndex={0}>
+
+                            {/* <li tabIndex={0}>
                                 <Link to='' className="justify-between">
                                     Parent
                                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                                 </Link>
                                 <ul className="p-2">
-                                    <li><Link to=''>Submenu 1</Link></li>
-                                    <li><Link to=''>Submenu 2</Link></li>
+                                    {
+                                        isBuyer && <>
+                                            <li><Link to='/dashboard/myorder'>Myorder</Link></li>
+                                        </>
+                                    }
+
+
+                                    {
+                                        isAdmin &&
+                                        <>
+                                            <li><Link to='/dashboard/allseller'>AllSeller</Link></li>
+                                            <li><Link to='/dashboard/allbuyer'>AllBuyer</Link></li>
+                                            <li><Link to='/dashboard/report'>Report</Link></li>
+                                        </>
+                                    }
+
+
+                                    {
+                                        isSeller &&
+                                        <>
+                                            <li><Link to='/dashboard/addproduct'>Add Product</Link></li>
+                                            <li><Link to='/dashboard/myproduct'>MyProduct</Link></li>
+                                        </>
+
+                                    }
+
                                 </ul>
                             </li>
-                            <li><Link to=''>Item 3</Link></li>
+
+                            <li><Link to=''>Item 3</Link></li> */}
                         </ul>
                     </div>
                     <Link to='' className="btn btn-ghost normal-case text-xl">WedRoad</Link>
@@ -70,10 +105,35 @@ const Navbar = () => {
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                             </Link>
                             <ul className="p-2">
-                                <li><Link to=''>Submenu 1</Link></li>
-                                <li><Link to=''>Submenu 2</Link></li>
+                            {
+                                isBuyer && <>
+                                    <li><Link to='/dashboard/myorder'>Myorder</Link></li>
+                                </>
+                            }
+
+
+                            {
+                                isAdmin &&
+                                <>
+                                    <li><Link to='/dashboard/allseller'>AllSeller</Link></li>
+                                    <li><Link to='/dashboard/allbuyer'>AllBuyer</Link></li>
+                                    <li><Link to='/dashboard/report'>Report</Link></li>
+                                </>
+                            }
+
+
+                            {
+                                isSeller &&
+                                <>
+                                    <li><Link to='/dashboard/addproduct'>Add Product</Link></li>
+                                    <li><Link to='/dashboard/myproduct'>MyProduct</Link></li>
+                                </>
+
+                            }
+
                             </ul>
                         </li> */}
+
                         {/* <li><Link to=''>Item 3</Link></li> */}
                     </ul>
                 </div>

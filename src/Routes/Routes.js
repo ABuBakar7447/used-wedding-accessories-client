@@ -1,6 +1,12 @@
+import DashBoardLayout from "../Layout/DashBoardLayout/DashBoardLayout";
 import Main from "../Layout/Main/Main";
 import Blogs from "../Pages/Blogs/Blogs";
 import CategoryProduct from "../Pages/CategoryProduct/CategoryProduct";
+import AddProduct from "../Pages/DashBoard/AddProduct/AddProduct";
+import AllBuyer from "../Pages/DashBoard/AllBuyer/AllBuyer";
+import AllSeller from "../Pages/DashBoard/AllSeller/AllSeller";
+import MyBooking from "../Pages/DashBoard/MyBookIng/MyBooking";
+import MyProduct from "../Pages/DashBoard/MyProduct/MyProduct";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
@@ -35,6 +41,39 @@ const router = createBrowserRouter([
             {
                 path: '/signin',
                 element: <SignUp></SignUp>
+            },
+        ]
+
+    },
+
+    {
+        path: '/dashboard',
+        element: <DashBoardLayout></DashBoardLayout>,
+        children: [
+
+            {
+                path: '/dashboard/addproduct',
+                element: <AddProduct></AddProduct>,
+            },
+            {
+                path: '/dashboard/myproduct',
+                element:<MyProduct></MyProduct>,
+            },
+            {
+                path: '/dashboard/allseller',
+                element: <AllSeller></AllSeller>,
+            },
+            {
+                path: '/dashboard/allbuyer',
+                element: <AllBuyer></AllBuyer>,
+            },
+            // {
+            //     path: '/dashboard/report',
+            //     element: <Report></Report>,
+            // },
+            {
+                path: '/dashboard/myorder',
+                element: <MyBooking></MyBooking>,
             },
         ]
 
