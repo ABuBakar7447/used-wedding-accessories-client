@@ -9,16 +9,16 @@ const ProductCard = ({ viewProduct, setModalData }) => {
 
     //checking seller status
 
-    // const { data: userDetails = [] } = useQuery({
+    const { data: userDetails = [] } = useQuery({
 
-    //     queryKey: ['sellerdetails', seller_email],
-    //     queryFn: async () => {
-    //         const res = await fetch(`https://second-hand-product-server.vercel.app/sellerdetails?seller_email=${seller_email}`);
-    //         const data = await res.json();
-    //         return data;
-    //     }
-    // });
-    // console.log(userDetails)
+        queryKey: ['sellerdetails', seller_email],
+        queryFn: async () => {
+            const res = await fetch(`http://localhost:5000/sellerdetails?seller_email=${seller_email}`);
+            const data = await res.json();
+            return data;
+        }
+    });
+    console.log(userDetails)
 
 
 
@@ -29,7 +29,7 @@ const ProductCard = ({ viewProduct, setModalData }) => {
 
 
 
-            <div className="card lg:card-side lg:w-3/4 mx-auto lg:h-[500px] bg-base-100 shadow-xl">
+            <div className="card lg:card-side lg:w-3/4 mx-auto lg:h-[550px] bg-base-100 shadow-xl">
                 <figure><img src={img_url} alt="Album" className='h-full w-[400px]' /></figure>
 
                 <div className="card-body text-start">
@@ -65,13 +65,18 @@ const ProductCard = ({ viewProduct, setModalData }) => {
 
                     {/* seller status showing */}
 
-                    {/* {
+                    {
                         userDetails.map(check =>
-                            <div key={check._id}>{<div className='flex font-bold'>Seller Status: {check?.verification} {check.verification === 'Verified' && <FaCheckCircle className='mx-2 bg-primary rounded'></FaCheckCircle>}</div>
+                            <div key={check._id}>{<div className='flex font-bold font-serif text-[#749383]'>Seller Status:
+                                <span className='text-black flex'>
+                                {check?.verification} {check.verification === 'Verified' && <FaCheckCircle className='mx-2 rounded text-blue-600'></FaCheckCircle>}
+                                </span>
+                            </div>
                             }
-                                {<h3 className='font-bold'>Seller Mail: {check?.email}</h3>}</div>
+                                {<h3 className='font-bold font-serif text-[#749383]'>Seller Mail:
+                                    <span className='text-black'>{check?.email}</span></h3>}</div>
                         )
-                    } */}
+                    }
 
 
 
@@ -81,13 +86,13 @@ const ProductCard = ({ viewProduct, setModalData }) => {
 
 
                     <div className="card-actions justify-end">
-                        
 
-                            <label htmlFor="my-modal-3" className="btn border-0 bg-[#cea274]
-                            hover:bg-[#749383] font-bold" onClick={() => setModalData(viewProduct)}  >Order 
+
+                        <label htmlFor="my-modal-3" className="btn border-0 bg-[#cea274]
+                            hover:bg-[#749383] font-bold" onClick={() => setModalData(viewProduct)}  >Order
                             <FaCartPlus className='text-black ml-2'></FaCartPlus></label>
-                            
-                        
+
+
                     </div>
                 </div>
             </div>

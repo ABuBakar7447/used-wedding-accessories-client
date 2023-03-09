@@ -19,7 +19,12 @@ const MyBooking = () => {
     // });
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myorder?email=${user?.email}`)
+        fetch(`http://localhost:5000/myorder?email=${user?.email}`,{
+            headers: {
+                authorization: `bearer ${localStorage.getItem('tokenForAccess')}`
+
+            }
+        })
             .then(res => res.json())
             .then(data => setMyOrder(data))
     }, [user?.email])

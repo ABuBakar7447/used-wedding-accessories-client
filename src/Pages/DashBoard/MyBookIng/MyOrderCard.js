@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MyOrderCard = ({viewOrder}) => {
-    const {product_img, name, email, productname, resaleprice, phone, location} = viewOrder
+    const {_id, product_img, name, email, productname, resaleprice, phone, location} = viewOrder
     return (
         <div>
             <div className="card card-compact  bg-base-100 shadow-xl mx-auto w-3/4 my-10">
@@ -29,7 +30,9 @@ const MyOrderCard = ({viewOrder}) => {
                     
 
                     <div className=' md:flex lg:flex-row flex m-5 justify-center'>
+                    <Link to={`/dashboard/payment/${_id}`}>
                     <button className='btn border-0 bg-[#cea274] hover:bg-[#749383] font-bold'>Proced For Payment</button>
+                    </Link>
                     </div>
 
                     
