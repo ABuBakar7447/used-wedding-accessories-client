@@ -5,13 +5,17 @@ import CategoryProduct from "../Pages/CategoryProduct/CategoryProduct";
 import AddProduct from "../Pages/DashBoard/AddProduct/AddProduct";
 import AllBuyer from "../Pages/DashBoard/AllBuyer/AllBuyer";
 import AllSeller from "../Pages/DashBoard/AllSeller/AllSeller";
+import DashBoard from "../Pages/DashBoard/DashBoard/DashBoard";
 import MyBooking from "../Pages/DashBoard/MyBookIng/MyBooking";
 import MyProduct from "../Pages/DashBoard/MyProduct/MyProduct";
 import Payment from "../Pages/DashBoard/Payment/Payment";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
+import AdminPrivate from "./AdminPrivate/AdminPrivate";
+import BuyerPrivate from "./BuyerPrivate/BuyerPrivate";
 import Private from "./Private/Private";
+import SellerPrivate from "./SellerPrivate/SellerPrivate";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -54,20 +58,25 @@ const router = createBrowserRouter([
         children: [
 
             {
+                path: '/dashboard',
+                element: <DashBoard></DashBoard>,
+            },
+
+            {
                 path: '/dashboard/addproduct',
-                element: <AddProduct></AddProduct>,
+                element: <SellerPrivate><AddProduct></AddProduct></SellerPrivate>,
             },
             {
                 path: '/dashboard/myproduct',
-                element:<MyProduct></MyProduct>,
+                element:<SellerPrivate><MyProduct></MyProduct></SellerPrivate>,
             },
             {
                 path: '/dashboard/allseller',
-                element: <AllSeller></AllSeller>,
+                element: <AdminPrivate><AllSeller></AllSeller></AdminPrivate>,
             },
             {
                 path: '/dashboard/allbuyer',
-                element: <AllBuyer></AllBuyer>,
+                element: <AdminPrivate><AllBuyer></AllBuyer></AdminPrivate>,
             },
             // {
             //     path: '/dashboard/report',
@@ -75,11 +84,11 @@ const router = createBrowserRouter([
             // },
             {
                 path: '/dashboard/myorder',
-                element: <MyBooking></MyBooking>,
+                element: <BuyerPrivate><MyBooking></MyBooking></BuyerPrivate>,
             },
             {
                 path: '/dashboard/payment/:id',
-                element: <Payment></Payment>,
+                element: <BuyerPrivate><Payment></Payment></BuyerPrivate>,
                 loader: ({params})=>fetch(`http://localhost:5000/bookingdata/${params.id}`)
             },
         ]

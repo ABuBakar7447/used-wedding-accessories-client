@@ -22,7 +22,7 @@ const DashBoardLayout = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className="navbar shadow-xl mb-10 bg-base-100 text-[#cea274] font-serif text-[18px] font-bold">
+            <div className="navbar shadow-xl bg-base-100 text-[#cea274] font-serif text-[18px] font-bold">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -54,7 +54,7 @@ const DashBoardLayout = () => {
                                 <>
                                     <li><Link to='/dashboard/allseller'>AllSeller</Link></li>
                                     <li><Link to='/dashboard/allbuyer'>AllBuyer</Link></li>
-                                    <li><Link to='/dashboard/report'>Report</Link></li>
+                                    {/* <li><Link to='/dashboard/report'>Report</Link></li> */}
                                 </>
                             }
 
@@ -102,7 +102,7 @@ const DashBoardLayout = () => {
                             <>
                                 <li><Link to='/dashboard/allseller'>AllSeller</Link></li>
                                 <li><Link to='/dashboard/allbuyer'>AllBuyer</Link></li>
-                                <li><Link to='/dashboard/report'>Report</Link></li>
+                                {/* <li><Link to='/dashboard/report'>Report</Link></li> */}
                             </>
                         }
 

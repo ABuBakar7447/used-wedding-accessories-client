@@ -122,7 +122,7 @@ const SignUp = () => {
                             <select className='font-bold p-2 rounded border-2 border-black' value={value} onChange={e => setValue(e.target.value)} name="companysize" id="company-size" required>
                                 <option >Buyer</option>
                                 <option>Seller</option>
-                                <option>Admin</option>
+                                {/* <option>Admin</option> */}
 
                             </select>
                         </div>

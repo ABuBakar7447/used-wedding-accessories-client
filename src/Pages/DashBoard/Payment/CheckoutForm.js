@@ -14,21 +14,7 @@ const CheckoutForm = ({data}) => {
 
 
 
-    // useEffect(() => {
-    //     // Create PaymentIntent as soon as the page loads
-    //     fetch("http://localhost:5000/create-payment-intent", {
-    //       method: "POST",
-    //       headers: { 
-    //         "Content-Type": "application/json",
-    //         // authorization: `bearer ${localStorage.getItem('tokenForAccess')}`
-            
-        
-    //     },
-    //       body: JSON.stringify({ resaleprice }),
-    //     })
-    //       .then((res) => res.json())
-    //       .then((data) => setClientSecret(data.clientSecret));
-    //   }, [resaleprice]);
+    
 
      
 
@@ -61,21 +47,7 @@ const CheckoutForm = ({data}) => {
 
     }
 
-    // useEffect(() => {
-    //     // Create PaymentIntent as soon as the page loads
-    //     fetch("http://localhost:5000/create-payment-intent", {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //             authorization: `bearer ${localStorage.getItem('tokenForAccess')}`
-    //         },
-    //         body: JSON.stringify({ resaleprice }),
-    //     })
-    //         .then((res) => res.json())
-    //         .then((data) => setClientSecret(data.clientSecret));
-    // }, [resaleprice]);
-
-
+    
 
 
     return (
